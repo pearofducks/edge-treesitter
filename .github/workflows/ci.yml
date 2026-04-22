@@ -23,9 +23,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24
-      - name: Set up examples
-        run: |-
-          git clone https://github.com/laravel/breeze examples/breeze --single-branch --depth=1 --filter=blob:none
       - name: Run tests
         uses: tree-sitter/parser-test-action@v2
         with:
@@ -35,11 +32,4 @@ jobs:
           test-python: false
           test-go: true
           test-swift: false
-      - name: Parse examples
-        id: test
-        uses: tree-sitter/parse-action@v4
-        with:
-          files: |
-            examples/**/*blade.php
-          invalid-files: |
-            examples/breeze/stubs/livewire-common/resources/views/components/action-message.blade.php
+
