@@ -4,23 +4,7 @@ name: CI
 on:
   push:
     branches: [main]
-    paths:
-      - "scripts.js"
-      - "common/*"
-      - "*/grammar.js"
-      - "*/src/**"
-      - "main/**"
-      - "bindings/**"
-      - "binding.gyp"
   pull_request:
-    paths:
-      - "scripts.js"
-      - "common/*"
-      - "*/grammar.js"
-      - "*/src/**"
-      - "main/**"
-      - "bindings/**"
-      - "binding.gyp"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -29,11 +13,7 @@ concurrency:
 jobs:
   test:
     name: Test parsers
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-14]
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

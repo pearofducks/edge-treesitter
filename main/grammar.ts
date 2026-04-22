@@ -59,8 +59,7 @@ export default grammar(html, {
     // ==================
     // Edge Expressions (mustache interpolation)
     // ==================
-    edge_expression: ($) =>
-      choice($._escaped, $._safe, $._passthrough),
+    edge_expression: ($) => choice($._escaped, $._safe, $._passthrough),
 
     // {{ expression }} — HTML-escaped output
     _escaped: ($) =>
