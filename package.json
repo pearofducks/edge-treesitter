@@ -1,0 +1,51 @@
+{
+  "name": "tree-sitter-edge",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "Edge.js template grammar for tree-sitter",
+  "keywords": [
+    "tree-sitter-edge",
+    "edge",
+    "tree-sitter",
+    "edgejs",
+    "adonisjs"
+  ],
+  "main": "bindings/node/index.cjs",
+  "types": "bindings/node/index.d.ts",
+  "files": [
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "grammar.js",
+    "tree-sitter.json",
+    "src/**",
+    "*.wasm"
+  ],
+  "dependencies": {
+    "node-addon-api": "^8.4.0",
+    "node-gyp-build": "^4.8.4"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.25.0"
+  },
+  "peerDependenciesMeta": {
+    "tree-sitter": {
+      "optional": false
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.32",
+    "prebuildify": "^6.0.1",
+    "tree-sitter-cli": "^0.25.6"
+  },
+  "scripts": {
+    "install": "node-gyp-build",
+    "build": "tree-sitter generate",
+    "prestart": "tree-sitter build --wasm",
+    "start": "tree-sitter playground -q",
+    "test": "node --test bindings/node/*_test.cjs",
+    "bundle": "deno -A ./main/bundle.ts"
+  }
+}

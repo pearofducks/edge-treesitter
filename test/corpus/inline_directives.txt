@@ -1,0 +1,83 @@
+==================
+Include partial
+==================
+
+@include('partials/header')
+
+---
+
+(document
+  (directive)
+  (parameter))
+
+==================
+Include if
+==================
+
+@includeIf(hasComments, 'partials/comments')
+
+---
+
+(document
+  (directive)
+  (parameter))
+
+==================
+Let declaration
+==================
+
+@let(username = 'virk')
+
+---
+
+(document
+  (directive)
+  (parameter))
+
+==================
+Eval expression
+==================
+
+@eval(counter++)
+
+---
+
+(document
+  (directive)
+  (parameter))
+
+==================
+Stack output
+==================
+
+@stack('scripts')
+
+---
+
+(document
+  (directive)
+  (parameter))
+
+==================
+Self-closing component
+==================
+
+@!component('button', { text: 'Click' })
+
+---
+
+(document
+  (directive)
+  (parameter))
+
+==================
+Self-closing component as tag
+==================
+
+@!button({ text: 'Submit' })
+
+---
+
+(document
+  (directive)
+  (parameter))

@@ -1,0 +1,39 @@
+==================
+Named slot with end
+==================
+
+@slot('header')
+  <h2>Title</h2>
+@end
+
+---
+
+(document
+  (slot
+    (directive_start)
+    (parameter)
+    (element
+      (start_tag (tag_name))
+      (text)
+      (end_tag (tag_name)))
+    (directive_end)))
+
+==================
+Slot with endslot
+==================
+
+@slot('content')
+  <p>Body</p>
+@endslot
+
+---
+
+(document
+  (slot
+    (directive_start)
+    (parameter)
+    (element
+      (start_tag (tag_name))
+      (text)
+      (end_tag (tag_name)))
+    (directive_end)))

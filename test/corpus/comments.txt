@@ -1,0 +1,23 @@
+==================
+Inline comment
+==================
+
+{{-- This is a comment --}}
+
+---
+
+(document
+  (comment))
+
+==================
+Multiline comment
+==================
+
+{{-- This is
+a multiline
+comment --}}
+
+---
+
+(document
+  (comment))

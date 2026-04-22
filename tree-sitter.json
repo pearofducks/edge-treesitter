@@ -1,0 +1,27 @@
+{
+  "grammars": [
+    {
+      "name": "edge",
+      "camelcase": "Edge",
+      "scope": "source.edge",
+      "file-types": [
+        "edge"
+      ],
+      "highlights": "queries/edge/highlights.scm",
+      "injections": "queries/edge/injections.scm"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Edge.js template grammar for tree-sitter"
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true
+  }
+}

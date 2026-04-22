@@ -1,0 +1,39 @@
+==================
+Push to stack
+==================
+
+@pushTo('scripts')
+  <div>content</div>
+@end
+
+---
+
+(document
+  (stack_push
+    (directive_start)
+    (parameter)
+    (element
+      (start_tag (tag_name))
+      (text)
+      (end_tag (tag_name)))
+    (directive_end)))
+
+==================
+Push once to stack
+==================
+
+@pushOnceTo('js')
+  <div>content</div>
+@end
+
+---
+
+(document
+  (stack_push
+    (directive_start)
+    (parameter)
+    (element
+      (start_tag (tag_name))
+      (text)
+      (end_tag (tag_name)))
+    (directive_end)))

@@ -1,0 +1,58 @@
+==================
+Block component
+==================
+
+@component('card', { class: 'lg' })
+  <p>Content</p>
+@end
+
+---
+
+(document
+  (component
+    (directive_start)
+    (parameter)
+    (element
+      (start_tag (tag_name))
+      (text)
+      (end_tag (tag_name)))
+    (directive_end)))
+
+==================
+Component as tag
+==================
+
+@modal()
+  <p>Content</p>
+@end
+
+---
+
+(document
+  (component
+    (directive_start)
+    (element
+      (start_tag (tag_name))
+      (text)
+      (end_tag (tag_name)))
+    (directive_end)))
+
+==================
+Dotted component tag
+==================
+
+@layout.app({ title: 'Home' })
+  <main>Content</main>
+@end
+
+---
+
+(document
+  (component
+    (directive_start)
+    (parameter)
+    (element
+      (start_tag (tag_name))
+      (text)
+      (end_tag (tag_name)))
+    (directive_end)))

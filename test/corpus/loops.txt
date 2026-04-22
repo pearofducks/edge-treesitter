@@ -1,0 +1,46 @@
+==================
+Simple each loop
+==================
+
+@each(user in users)
+  <li>Hello</li>
+@end
+
+---
+
+(document
+  (loop
+    (directive_start)
+    (parameter)
+    (element
+      (start_tag (tag_name))
+      (text)
+      (end_tag (tag_name)))
+    (directive_end)))
+
+==================
+Each with else fallback
+==================
+
+@each(comment in comments)
+  <p>Found</p>
+@else
+  <p>None</p>
+@end
+
+---
+
+(document
+  (loop
+    (directive_start)
+    (parameter)
+    (element
+      (start_tag (tag_name))
+      (text)
+      (end_tag (tag_name)))
+    (directive)
+    (element
+      (start_tag (tag_name))
+      (text)
+      (end_tag (tag_name)))
+    (directive_end)))

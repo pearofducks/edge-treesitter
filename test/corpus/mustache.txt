@@ -1,0 +1,46 @@
+==================
+Simple mustache expression
+==================
+
+{{ user.name }}
+
+---
+
+(document
+  (edge_expression
+    (javascript)))
+
+==================
+Safe mustache expression
+==================
+
+{{{ html.safe(content) }}}
+
+---
+
+(document
+  (edge_expression
+    (javascript)))
+
+==================
+Passthrough mustache
+==================
+
+@{{ frontendVar }}
+
+---
+
+(document
+  (edge_expression
+    (javascript)))
+
+==================
+Empty mustache
+==================
+
+{{  }}
+
+---
+
+(document
+  (edge_expression))
