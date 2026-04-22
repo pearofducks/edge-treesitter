@@ -4,12 +4,12 @@ Tree-sitter grammar for [Edge.js](https://edgejs.dev) templates, with built-in N
 
 ## Neovim Installation
 
-Requires [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
+Requires the [tree-sitter CLI](https://tree-sitter.github.io/tree-sitter/creating-parsers#installation) for first-time parser compilation.
 
 ### lazy.nvim
 
 ```lua
-{ "pearofducks/edge-treesitter", build = ":TSInstall edge" }
+{ "pearofducks/edge-treesitter" }
 ```
 
 ### vim.pack.add
@@ -18,7 +18,7 @@ Requires [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
 vim.pack.add({ "https://github.com/pearofducks/edge-treesitter" })
 ```
 
-Then run `:TSInstall edge` to compile the parser.
+The parser is compiled automatically on first load. Restart Neovim after initial install.
 
 ## Included TS features
 
